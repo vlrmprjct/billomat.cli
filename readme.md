@@ -2,11 +2,7 @@
 
 ## Install
 
-No npm package available for now so you have to use:
-
-`$ npm pack`
-
-`$ npm install -g billomat-cli-0.0.1.tgz `
+`$ npm install -g @billomat/cli`
 
 ### Usage ( Available commands )
 
