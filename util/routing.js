@@ -10,6 +10,8 @@ const test = (args) => {
 
 const feed = (args, id, token) => {
 
+    process.stdout.write('Loading...\r');
+
     fetch(`https://${id}.billodev.net/api/v2/activity-feed`, {
         headers: {
             'X-BillomatApiKey': token,
