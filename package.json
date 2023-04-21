@@ -5,6 +5,9 @@
     "author": "Thomas Meschke <thomas.meschke@aifinyo.de>",
     "license": "MIT",
     "main": "cli.js",
+    "bin": {
+        "billcli": "./cli.js"
+    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
