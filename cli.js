@@ -26,7 +26,7 @@ if (fs.existsSync(settingsFile) && fs.statSync(settingsFile).size > 0) {
     console.log('');
     console.log(colorize('┌──────────────────────────────┐', 'brightGreen'));
     console.log(colorize('│                              │', 'brightGreen'));
-    console.log(colorize('│     Billomat CLI v0.0.1      │', 'brightGreen'));
+    console.log(colorize('│     Billomat CLI v0.0.4      │', 'brightGreen'));
     console.log(colorize('│                              │', 'brightGreen'));
     console.log(colorize('└──────────────────────────────┘', 'brightGreen'));
     console.log('');
