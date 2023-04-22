@@ -1,4 +1,4 @@
-const polling = (callback, interval = 3000) => {
+const polling = (callback, interval = 15000) => {
 
     if (interval < 3000) {
         console.error('Interval cannot be lower than 3000ms');
