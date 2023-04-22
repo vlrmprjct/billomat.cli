@@ -24,7 +24,7 @@ state.command = process.argv.slice(2)[0];
 // FIRST RUN
 if (fs.existsSync(settingsFile) && fs.statSync(settingsFile).size > 0) {
     const settings = JSON.parse(fs.readFileSync(settingsFile, 'utf-8'));
-    state.id = settings.id;s
+    state.id = settings.id;
     state.token = settings.token;
 } else {
     console.log(boxen(colorize(`Billomat CLI v${version}`, 'cyan'), {
