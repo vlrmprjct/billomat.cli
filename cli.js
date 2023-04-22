@@ -27,11 +27,13 @@ if (fs.existsSync(settingsFile) && fs.statSync(settingsFile).size > 0) {
     state.id = settings.id;s
     state.token = settings.token;
 } else {
-    console.log('');
     console.log(boxen(colorize(`Billomat CLI v${version}`, 'cyan'), {
-        padding: 1, borderColor: 'cyan', borderStyle: 'round', width: 52,
+        borderColor: 'cyan',
+        borderStyle: 'round',
+        margin: { top: 1, bottom: 1 },
+        padding: 1,
+        width: 52,
     }));
-    console.log('');
 
     if (state.command !== 'init') {
         console.log(colorize('⚠️  No configuration found! Run \'billcli init\' first. ', 'brightYellow'));
