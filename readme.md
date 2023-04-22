@@ -1,4 +1,4 @@
-# Billomat CLI 👾🧪
+# Billomat CLI 👾🧪 ( Pre-Alpha )
 
 ## Install
 
@@ -6,11 +6,15 @@
 
 ### Usage ( Available commands )
 
+#### Initialize CLI
 `$ billcli init`
 
-`$ billcli feed --watch`
+#### Activity Feed
+`$ billcli activity` [ Latest entries ]
 
-`$ billcli feed --watch 10000`
+`$ billcli activity --watch` [ Last entry, default pollintervall: 15sec]
+
+`$ billcli activity --watch 3000`
 
 
 ---
@@ -24,13 +28,15 @@
 ---
 ## Develop
 
+`$ git clone git@github.com:vlrmprjct/billomat.cli.git`
+
+`$ cd billomat.cli`
+
 `$ npm ci`
 
+### Make Executable
+`$ chmod +x cli.js`
 
 ### Usage
 
-`$ ./cli.js init`
-
-`$ ./cli.js feed --watch`
-
-`$ ./cli.js feed --watch 10000`
+`$ ./cli.js [command] [--args]`
