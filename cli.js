@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import { config, colorize, routing } from './util/index.js';
+import { colorize } from './util/index.js';
+import routing from './routing/routing.js'
 
 const settingsFile = new URL('settings.json', import.meta.url).pathname;
 
@@ -31,7 +32,7 @@ if (fs.existsSync(settingsFile) && fs.statSync(settingsFile).size > 0) {
     console.log('');
 
     if (state.command !== 'init') {
-        console.log(colorize('⚠️ No configuration found! Run \'billcli init\' first. ', 'brightYellow'));
+        console.log(colorize('⚠️  No configuration found! Run \'billcli init\' first. ', 'brightYellow'));
         console.log('');
         process.exit(1);
     }

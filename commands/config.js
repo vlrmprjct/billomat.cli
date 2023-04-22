@@ -1,8 +1,7 @@
 import fs from 'fs';
-import path from 'path';
 import { promisify } from 'util';
 import prompt from 'prompt-sync'
-import colorize from './colorize.js';
+import { colorize } from './../util/index.js';
 
 const config = (settingsFile) => {
 

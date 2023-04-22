@@ -1,11 +1,9 @@
-import config from './config.js';
+import fetchAPI from './api.js';
 import colorize from './colorize.js';
 import polling from './polling.js';
-import routing from './routing.js';
 
 export {
-    config,
     colorize,
+    fetchAPI,
     polling,
-    routing,
 };
