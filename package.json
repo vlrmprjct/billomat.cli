@@ -13,6 +13,7 @@
     },
     "type": "module",
     "dependencies": {
+        "boxen": "^7.0.2",
         "cli-spinners": "^2.8.0",
         "log-update": "^5.0.1",
         "node-fetch": "^3.3.1",
