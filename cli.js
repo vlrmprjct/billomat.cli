@@ -2,11 +2,8 @@
 
 import fs from 'fs';
 import boxen from 'boxen';
-import { colorize } from './util/index.js';
+import { colorize, version } from './util/index.js';
 import routing from './routing/routing.js'
-
-const packageFile = new URL('package.json', import.meta.url).pathname;
-const version = JSON.parse(fs.readFileSync(packageFile, 'utf-8')).version;
 
 const settingsFile = new URL('settings.json', import.meta.url).pathname;
 
@@ -27,7 +24,7 @@ if (fs.existsSync(settingsFile) && fs.statSync(settingsFile).size > 0) {
     state.id = settings.id;
     state.token = settings.token;
 } else {
-    console.log(boxen(colorize(`Billomat CLI v${version}`, 'cyan'), {
+    console.log(boxen(colorize(`Billomat CLI v${version()}`, 'cyan'), {
         borderColor: 'cyan',
         borderStyle: 'round',
         margin: { top: 1, bottom: 1 },

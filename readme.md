@@ -6,15 +6,13 @@
 
 ### Usage ( Available commands )
 
-#### Initialize CLI
-`$ billcli init`
 
-#### Activity Feed
-`$ billcli activity` [ Latest entries ]
-
-`$ billcli activity --watch` [ Last entry, default pollintervall: 15sec]
-
-`$ billcli activity --watch 3000`
+| Command      | Description              | Arguments                |
+| ------------ | ------------------------ | ------------------------ |
+| `init` | Initialize cli |  |
+| `activity` | Show activity feed | `--watch` Polls the activity feed, default 15sec<br>`--watch <interval>` Set poll interval in milliseconds |
+| `search` | Search across documents | `--term <term*>` Required*, provided search term<br>`--type <type>` Type of document |
+| `help` | This command |  |
 
 
 ---
