@@ -17,6 +17,7 @@
 ### CLI fun part 🦄
 
 `$ billcli search --term something >> export.txt`
+
 `$ billcli search --term something >> export-1.txt && billcli search --term otherthings >> export-2.txt`
 
 ---
