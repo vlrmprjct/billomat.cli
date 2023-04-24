@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 const API_URL = process.env.NODE_ENV === 'development' ? 'billodev' : 'billomat';
 
 const fetchAPI = async (apiUrl, token, id, callback, options = {}) => {
