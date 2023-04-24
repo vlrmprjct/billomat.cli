@@ -4,6 +4,7 @@
     "description": "Billomat CLI",
     "author": "Thomas Meschke <thomas.meschke@aifinyo.de>",
     "license": "MIT",
+    "repository": "https://github.com/vlrmprjct/billomat.cli",
     "main": "cli.js",
     "bin": {
         "billcli": "./cli.js"
@@ -18,5 +19,14 @@
         "log-update": "^5.0.1",
         "node-fetch": "^3.3.1",
         "prompt-sync": "^4.2.0"
-    }
+    },
+    "engines": {
+        "node": ">=18.15.0",
+        "npm": "~9.5.0"
+    },
+    "os": [
+        "linux",
+        "!win32",
+        "!win64"
+    ]
 }

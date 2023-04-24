@@ -1,5 +1,9 @@
 # Billomat CLI 👾🧪 ( Pre-Alpha )
 
+![node-current](https://img.shields.io/node/v/@billomat/cli)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/vlrmprjct/billomat.cli?color=%2353BE7E)
+![GitHub](https://img.shields.io/github/license/vlrmprjct/billomat.cli)
+
 ## Install
 
 `$ npm install -g @billomat/cli`
