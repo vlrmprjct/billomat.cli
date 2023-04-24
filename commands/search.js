@@ -3,19 +3,16 @@ import { fetchAPI } from './../util/index.js';
 const search = (args, id, token) => {
 
     const query = args[args.indexOf('--term') + 1];
+    const type = args[args.indexOf('--type') + 1];
+    const size = (args.indexOf('--size') < 0) ? 50 : args[args.indexOf('--size') + 1];
 
     const actions = {
         '--term': () => {
-
-            const filterIndex = args.indexOf('--type');
-            const filter = filterIndex !== -1 ? args[filterIndex + 1] : null;
-
-            fetchAPI(`search?query=${query}`, token, id, (data) => {
-                const filteredData = data.filter(obj => obj.resource === filter);
+            fetchAPI(`search?query=${query}&resource=${type}&per_page=${size}`, token, id, (data) => {
                 console.table(
-                    (filteredData.length ? filteredData : data).map(({ id, resource, headline, subline }) => ({
+                    data.map(({ id, resource, headline, subline }) => ({
                         ID: id,
-                        Resource: resource,
+                        Type: resource,
                         Headline: headline,
                         Subline: subline,
                     }))

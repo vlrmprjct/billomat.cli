@@ -20,6 +20,7 @@ const commands = [
         arguments: [
             { name: '--term <term*>', description: 'required*, provided search term' },
             { name: '--type <type>', description: 'type of document' },
+            { name: '--size <amount | 50>', description: 'amount of listed results' },
         ],
     },
     {

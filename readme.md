@@ -15,12 +15,12 @@
 | ------------ | ------------------------ | ------------------------ |
 | `init` | Initialize cli |  |
 | `activity` | Show activity feed | `--watch` Polls the activity feed, default 15sec<br>`--watch <interval>` Set poll interval in milliseconds |
-| `search` | Search across documents | `--term <term*>` Required*, provided search term<br>`--type <type>` Type of document |
+| `search` | Search across documents | `--term <term*>` Required*, provided search term<br>`--type <type>` Type of document<br>`--size <int>` Amount of listed results |
 | `help` | This command |  |
 
 ### CLI fun part 🦄
 
-`$ billcli search --term something >> export.txt`
+`$ billcli search --term something --type articles >> export.txt`
 
 `$ billcli search --term something >> export-1.txt && billcli search --term otherthings >> export-2.txt`
 
