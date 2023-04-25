@@ -1,4 +1,18 @@
+
+import Table from 'tty-table';
 import { fetchAPI } from './../util/index.js';
+
+const options = {
+    borderStyle: "solid",
+    borderColor: "gray",
+    compact: false,
+    paddingBottom: 0,
+    headerAlign: "center",
+    headerColor: "green",
+    align: "left",
+    color: "white",
+    width: "100%"
+}
 
 const search = (args, id, token) => {
 
@@ -17,6 +31,10 @@ const search = (args, id, token) => {
                         Subline: subline,
                     }))
                 );
+
+                const t1 = Table(Object.keys(data[0]).map(key => ({ value: key })), data, options).render();
+                console.log(t1)
+
             });
         },
     };
