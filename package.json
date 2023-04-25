@@ -1,6 +1,6 @@
 {
     "name": "@billomat/cli",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "Billomat CLI",
     "author": "Thomas Meschke <thomas.meschke@aifinyo.de>",
     "license": "MIT",
