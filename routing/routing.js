@@ -13,7 +13,7 @@ const routing = ({ args, command, id, settings, token }) => {
         search: () => search(args, id, token),
     };
 
-    return routes[command];
+    return routes[command] || help();
 };
 
 export default routing;
