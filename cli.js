@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
+import path from 'path';
 import boxen from 'boxen';
 import { colorize, version } from './util/index.js';
 import routing from './routing/routing.js'
 
-const settingsFile = new URL('settings.json', import.meta.url).pathname;
+const settingsFile = path.join(process.cwd(), 'settings.json');
 
 const state = {
     args: null,
