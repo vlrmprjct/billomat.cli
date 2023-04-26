@@ -30,7 +30,7 @@ const search = (args, id, token) => {
                     { value: 'resource', alias: 'Type'},
                     { value: 'headline', alias: 'Number', width: 30, formatter: (value) => value.replace('[', '').split(']')[0] || ''},
                     { value: 'headline', alias: 'Description', width: 30, formatter: (value) => value.replace('[', '').split(']')[1] || ''},
-                    { value: 'subline', alias: 'Excerpt' }
+                    { value: 'subline', alias: 'Excerpt', width: 30, }
                 ];
                 const output = Table(header, data, options);
                 console.log(data.length > 0 ? output.render() + '\n' : '\n ❌ No results \n')
