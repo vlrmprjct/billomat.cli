@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
+import { getAbsolutePath } from 'esm-path'
 import boxen from 'boxen';
 import { colorize, version } from './util/index.js';
 import routing from './routing/routing.js'
 
-const settingsFile = new URL('settings.json', import.meta.url).pathname;
+const settingsFile = getAbsolutePath(import.meta.url, 'settings.json')
 
 const state = {
     args: null,

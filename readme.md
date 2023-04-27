@@ -4,6 +4,9 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/vlrmprjct/billomat.cli?color=%2353BE7E)
 ![GitHub](https://img.shields.io/github/license/vlrmprjct/billomat.cli)
 
+## Screenshot
+![](doc/cli.gif)
+
 ## Install
 
 `$ npm install -g @billomat/cli`

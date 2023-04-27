@@ -1,8 +1,9 @@
 import fs from 'fs';
+import { getAbsolutePath } from 'esm-path'
 
 const version = () => {
 
-    const packageFile = new URL('./../package.json', import.meta.url).pathname;
+    const packageFile = getAbsolutePath(import.meta.url, '../package.json')
     return JSON.parse(fs.readFileSync(packageFile, 'utf-8')).version;
 
 };
