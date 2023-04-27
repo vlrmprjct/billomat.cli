@@ -1,18 +1,4 @@
-
-import Table from 'tty-table';
-import { fetchAPI } from './../util/index.js';
-
-const options = {
-    align: "left",
-    borderColor: "gray",
-    borderStyle: "solid",
-    color: "white",
-    compact: false,
-    headerAlign: "center",
-    headerColor: "cyan",
-    truncate: ' ...',
-    width: "100%",
-}
+import { fetchAPI, table } from './../util/index.js';
 
 const search = (args, id, token) => {
 
@@ -25,15 +11,15 @@ const search = (args, id, token) => {
     const actions = {
         '--term': () => {
             fetchAPI(`search?query=${query}&resource=${type}&per_page=${size}`, token, id, (data) => {
-                const header = [
-                    { value: 'id', alias: 'ID'},
+                const columns = [
+                    { value: 'id', alias: 'ID', color: 'cyan' },
                     { value: 'resource', alias: 'Type'},
                     { value: 'headline', alias: 'Number', width: 30, formatter: (value) => value.replace('[', '').split(']')[0] || ''},
                     { value: 'headline', alias: 'Description', width: 30, formatter: (value) => value.replace('[', '').split(']')[1] || ''},
                     { value: 'subline', alias: 'Excerpt', width: 30, }
                 ];
-                const output = Table(header, data, options);
-                console.log(data.length > 0 ? output.render() + '\n' : '\n ❌ No results \n')
+                const output = table(data, columns);
+                console.log(data.length > 0 ? output + '\n' : '\n ❌ No results \n');
             });
         },
     };
