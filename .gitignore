@@ -13,3 +13,5 @@ dist
 # misc
 /.cache
 settings.*
+.vscode
+.idea
