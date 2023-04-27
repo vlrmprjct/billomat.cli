@@ -25,7 +25,8 @@
         "esm-path": "1.0.1",
         "log-update": "^5.0.1",
         "node-fetch": "^3.3.1",
-        "prompt-sync": "^4.2.0"
+        "prompt-sync": "^4.2.0",
+        "tty-table": "^4.2.1"
     },
     "engines": {
         "node": ">=18.15.0",
