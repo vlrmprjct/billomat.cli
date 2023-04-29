@@ -26,11 +26,13 @@
 
 `$ clib search --term something --type articles >> export.txt`
 
-`$ clib search --term something >> export-1.txt && billcli search --term otherthings >> export-2.txt`
+`$ clib search --term something >> export-1.txt && clib search --term otherthings >> export-2.txt`
 
 `$ clib resource --type articles`
 
 `$ clib resource --type clients --size 10 --page 2 --sort name`
+
+`$ clib resource --type clients --size 10 --page 2 --sort name && clib resource --type articles --size 10 --page 3`
 
 
 ---
