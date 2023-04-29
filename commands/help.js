@@ -24,6 +24,17 @@ const commands = [
         ],
     },
     {
+        name: 'resource',
+        description: 'search across documents',
+        arguments: [
+            { name: '--type <type>', description: 'type of document' },
+            { name: '--page <int>', description: 'page of resultset' },
+            { name: '--size <amount | 50>', description: 'amount of listed results' },
+            { name: '--sort <sort>', description: 'column sort (same as API)' },
+            { name: '--desc', description: 'reverse column order direction' },
+        ],
+    },
+    {
         name: 'help',
         description: 'this command',
         arguments: [],
