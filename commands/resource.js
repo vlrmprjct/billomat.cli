@@ -39,12 +39,13 @@ const resource = (args, id, token) => {
         order = argValue(args, '--sort', 'id'),
         page = argValue(args, '--page', '1'),
         type = argValue(args, '--type'),
-        size = argValue(args, '--size', '100'),
+        size = argValue(args, '--size', '50'),
+        dir = args.indexOf('--desc'),
     } = args;
 
     if (!argRequired(args, ['--type'], { '--type': ['articles', 'clients', 'suppliers'] })) return;
 
-    fetchAPI(`${type}?order_by=${order}&per_page=${size}&page=${page}`, token, id, (data) => {
+    fetchAPI(`${type}?order_by=${order}${(dir > 0) ? '+DESC': '+ASC'}&per_page=${size}&page=${page}`, token, id, (data) => {
 
         const result = data.length > 0 ? table(data, columns[type]) + '\n' : '\n ❌ No results \n';
         console.log(result);
