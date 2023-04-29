@@ -7,7 +7,7 @@
     "repository": "https://github.com/vlrmprjct/billomat.cli",
     "main": "cli.js",
     "bin": {
-        "billcli": "./cli.js"
+        "clib": "./cli.js"
     },
     "files": [
         "*/**/*",
