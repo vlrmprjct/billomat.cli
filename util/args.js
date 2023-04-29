@@ -6,12 +6,24 @@ const argValue = (args, argName, defaultValue) => {
     return defaultValue || null;
 };
 
-const argRequired = (args, required = []) => {
-    if (!required.every(arg => args.includes(arg))) {
-        console.log(`\n Error, missing one or more required arguments: ${required.join(', ')}. \n`);
-        return false;
-    }
-    return true;
-};
+const argRequired = (args, required = [], allowedValues = {}) =>
+    required.reduce((isValid, arg) => {
+        const hasArg = args.includes(arg);
+        const invalidValues = allowedValues[arg]
+            ? args.includes(arg) && !allowedValues[arg].includes(args[args.indexOf(arg) + 1])
+            : false;
+
+        if (!hasArg) {
+            console.log(`\nError: Missing required argument '${arg}'\n`);
+            return false;
+        }
+
+        if (invalidValues) {
+            console.log(`\nError: Invalid value for argument '${arg}'\n`);
+            return false;
+        }
+
+        return isValid;
+    }, true);
 
 export { argValue, argRequired };
