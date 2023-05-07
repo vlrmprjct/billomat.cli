@@ -1,10 +1,25 @@
 {
-    "name": "@billomat/cli",
-    "version": "0.1.0",
-    "description": "Billomat CLI",
+    "name": "@vlrmprjct/billomat-cli",
+    "version": "0.2.0",
+    "description": "(Unofficial) Billomat CLI",
     "author": "Thomas Meschke <thomas.meschke@aifinyo.de>",
     "license": "MIT",
     "repository": "https://github.com/vlrmprjct/billomat.cli",
+    "keywords": [
+        "billomat",
+        "cli",
+        "commandline",
+        "commandline interface",
+        "interface",
+        "terminal",
+        "terminalapp",
+        "console",
+        "nodejs",
+        "node",
+        "shell",
+        "bash",
+        "zsh"
+    ],
     "main": "cli.js",
     "bin": {
         "clib": "./cli.js"

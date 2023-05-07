@@ -1,6 +1,6 @@
-# Billomat CLI 👾🧪 ( Pre-Alpha )
+# ( Unofficial ) Billomat CLI 👾🧪 ( Pre-Alpha )
 
-![node-current](https://img.shields.io/node/v/@billomat/cli)
+![node-current](https://img.shields.io/node/v/@vlrmprjct/billomat-cli)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/vlrmprjct/billomat.cli?color=%2353BE7E)
 ![GitHub](https://img.shields.io/github/license/vlrmprjct/billomat.cli)
 
@@ -9,7 +9,7 @@
 
 ## Install
 
-`$ npm install -g @billomat/cli`
+`$ npm install -g @vlrmprjct/billomat-cli`
 
 ### Usage ( Available commands )
 
