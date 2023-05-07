@@ -34,7 +34,7 @@ if (fs.existsSync(settingsFile) && fs.statSync(settingsFile).size > 0) {
     }));
 
     if (state.command !== 'init') {
-        console.log(colorize('⚠️  No configuration found! Run \'billcli init\' first. ', 'brightYellow'));
+        console.log(colorize('⚠️  No configuration found! Run \'clib init\' first. ', 'brightYellow'));
         console.log('');
         process.exit(1);
     }
