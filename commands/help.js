@@ -45,7 +45,7 @@ const help = () => {
     console.log('');
     console.log('Billomat CLI Version:', version());
     console.log('');
-    console.log('Usage: billcli [command] [--key value]');
+    console.log('Usage: clib [command] [--key value]');
     console.log('');
     console.log('Commands:');
     console.log('');
