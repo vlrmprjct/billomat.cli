@@ -4,7 +4,7 @@ import { loaderStart, loaderStop } from './loader.js';
 import { argRequired, argValue} from './args.js';
 import polling from './polling.js';
 import table from './table.js';
-import version from './version.js';
+import { version, versionCheck }  from './version.js';
 
 export {
     argRequired,
@@ -16,4 +16,5 @@ export {
     polling,
     table,
     version,
+    versionCheck,
 };

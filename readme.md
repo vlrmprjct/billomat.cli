@@ -20,6 +20,7 @@
 | `activity` | Show activity feed | `--watch` Polls the activity feed, default 15sec<br>`--watch <interval>` Set poll interval in milliseconds |
 | `search` | Search across documents | `--term <term*>` Required*, provided search term<br>`--type <type>` Type of document<br>`--size <int>` Amount of listed results |
 | `resource` | List documents | `--type <type*>` Required*, type of document resource<br>`--page <int>` page of resultset<br>`--size <int>` Amount of listed results<br>`--sort <string>` column sort (same as API)<br>`--desc` Reverse column order direction<br><br> Current available resources: _Articles, Clients, Suppliers_ <br>|
+| `version` | show current version | `--check` Check available package version @ npm |
 | `help` | This command |  |
 
 ### CLI fun part and examples 🦄

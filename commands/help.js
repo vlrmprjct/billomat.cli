@@ -1,4 +1,4 @@
-import { version } from './../util/index.js';
+import { version, versionCheck } from './../util/index.js';
 
 const commands = [
     {
@@ -25,13 +25,20 @@ const commands = [
     },
     {
         name: 'resource',
-        description: 'search across documents',
+        description: 'list documents by type',
         arguments: [
             { name: '--type <type>', description: 'type of document' },
             { name: '--page <int>', description: 'page of resultset' },
             { name: '--size <amount | 50>', description: 'amount of listed results' },
             { name: '--sort <sort>', description: 'column sort (same as API)' },
             { name: '--desc', description: 'reverse column order direction' },
+        ],
+    },
+    {
+        name: 'version',
+        description: 'show current version',
+        arguments: [
+            { name: '--check', description: 'Check available package version @ npm' },
         ],
     },
     {
@@ -43,7 +50,7 @@ const commands = [
 
 const help = () => {
     console.log('');
-    console.log('Billomat CLI Version:', version());
+    console.log('Billomat CLI Version:', version() );
     console.log('');
     console.log('Usage: clib [command] [--key value]');
     console.log('');
